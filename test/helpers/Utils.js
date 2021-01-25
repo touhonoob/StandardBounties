@@ -2,8 +2,6 @@
 
 const HttpProvider = require('ethjs-provider-http');
 const EthRPC = require('ethjs-rpc');
-const ethRPC = new EthRPC(new HttpProvider('http://localhost:7545'));
-
 
 function isException(error) {
     let strError = error.toString();
