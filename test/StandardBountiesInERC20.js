@@ -12,6 +12,8 @@ contract('StandardBounties', function(accounts) {
         /*************-*************/
         /*** Business Logic Test ***/
         /*************-*************/
+
+        /** 1. Bounty Issuer建立Bounty */
         truffleAssert.eventEmitted(
             // function issueAndContribute(
             //     address payable _sender,
@@ -36,6 +38,7 @@ contract('StandardBounties', function(accounts) {
             'BountyIssued'
         );
 
+        /** 2. Bounty Hunter提案 */
         truffleAssert.eventEmitted(
             // fulfillBounty(
             //     address _sender,
@@ -52,6 +55,7 @@ contract('StandardBounties', function(accounts) {
             'BountyFulfilled'
         );
 
+        /** 3. 接受提案 */
         truffleAssert.eventEmitted(
             // acceptFulfillment(
             //     address _sender,
